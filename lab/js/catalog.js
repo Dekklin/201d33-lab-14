@@ -19,8 +19,7 @@ function handleSubmit(event) {
   event.preventDefault();
   var name = event.target.items.value;
   var quantity = parseInt(event.target.quantity.value);
-  new Cart(name, quantity);
-  console.log(Cart);
+  allCart.push(new Cart(name, quantity));
   // Do all the things
   addSelectedItemToCart();
   saveCartToLocalStorage();
@@ -31,13 +30,13 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
   // TODO: Add the selected item and quantity to the cart
   console.log(event.target.quantity.value);
-  allCart.push(event.target.value);
+  // allCart.push(event.target.value);
 }
 
 function saveCartToLocalStorage() {
   // TODO: Save the cart to Local Storage
   var cartData = JSON.stringify(allCart);
-  localStorage.setItem( 'localCart', cartData);
+  localStorage.setItem( 'localData', cartData);
 }
 
 function updateCounter() {
