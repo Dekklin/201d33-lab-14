@@ -4,7 +4,7 @@ var allCart = [];
 var Cart = function(name, quantity) {
   this.name = name;
   this.quantity = quantity;
-  allCart.push(this);
+//  allCart.push(this);
 };
 
 
